@@ -1,0 +1,518 @@
+/* Case Detail Panel */
+.case-detail-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  background: white;
+  border-left: 1px solid #e5e7eb;
+}
+
+/* Case Detail Header */
+.case-detail-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 24px;
+  border-bottom: 2px solid #f3f4f6;
+  flex-shrink: 0;
+}
+
+.case-detail-header h2 {
+  font-size: 22px;
+  font-weight: 700;
+  color: #1f2937;
+  margin: 0 0 8px 0;
+}
+
+.case-meta {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.meta-item {
+  font-size: 13px;
+  color: #6b7280;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.btn-delete {
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+  color: #6b7280;
+}
+
+.btn-delete:hover {
+  background-color: #f3f4f6;
+  color: #ef4444;
+  transform: scale(1.1);
+}
+
+/* Error Message */
+.error-message {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 0;
+  padding: 12px 24px;
+  background-color: #fef2f2;
+  border-bottom: 1px solid #fecaca;
+  color: #7f1d1d;
+  font-size: 13px;
+  flex-shrink: 0;
+}
+
+.error-message button {
+  background: none;
+  border: none;
+  color: #7f1d1d;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 0;
+  margin-left: auto;
+  transition: opacity 0.3s ease;
+}
+
+.error-message button:hover {
+  opacity: 0.7;
+}
+
+/* Scrollable Content Area */
+.case-detail-container > div:not(.case-detail-header):not(.error-message) {
+  flex: 1;
+  overflow-y: auto;
+  padding: 0;
+}
+
+/* Content Sections */
+.section {
+  padding: 24px;
+  border-bottom: 1px solid #f3f4f6;
+}
+
+.section h3 {
+  font-size: 14px;
+  font-weight: 600;
+  color: #1f2937;
+  margin: 0 0 12px 0;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.clinical-notes {
+  background-color: #f9fafb;
+  border: 1px solid #e5e7eb;
+  border-radius: 6px;
+  padding: 12px;
+  font-size: 13px;
+  color: #374151;
+  line-height: 1.6;
+  max-height: 200px;
+  overflow-y: auto;
+  white-space: pre-wrap;
+  word-break: break-word;
+  font-family: "Courier New", monospace;
+}
+
+/* No Summary State */
+.no-summary {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 60px 24px;
+  border: 2px dashed #d1d5db;
+  background-color: #f9fafb;
+  border-radius: 8px;
+}
+
+.no-summary-icon {
+  font-size: 48px;
+  margin-bottom: 16px;
+}
+
+.no-summary h3 {
+  font-size: 16px;
+  font-weight: 600;
+  color: #1f2937;
+  margin: 0 0 8px 0;
+  text-transform: none;
+}
+
+.no-summary p {
+  font-size: 13px;
+  color: #6b7280;
+  margin: 0 0 24px 0;
+}
+
+.btn-summarize {
+  background-color: #3b82f6;
+  color: white;
+  padding: 12px 24px;
+  font-size: 14px;
+  font-weight: 600;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  justify-content: center;
+}
+
+.btn-summarize:hover:not(:disabled) {
+  background-color: #2563eb;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+}
+
+.btn-summarize:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.btn-summarize.loading {
+  pointer-events: none;
+}
+
+/* Summary Results */
+.summary-results {
+  padding: 0;
+  border: none;
+}
+
+.summary-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 24px;
+  border-bottom: 1px solid #f3f4f6;
+  gap: 12px;
+}
+
+.summary-header h3 {
+  margin: 0;
+}
+
+.btn-resummarize {
+  background-color: white;
+  border: 1px solid #d1d5db;
+  color: #374151;
+  padding: 8px 12px;
+  font-size: 12px;
+  font-weight: 600;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.btn-resummarize:hover:not(:disabled) {
+  border-color: #3b82f6;
+  color: #3b82f6;
+  background-color: #eff6ff;
+}
+
+/* Summary Section */
+.summary-section {
+  padding: 20px 24px;
+  border-bottom: 1px solid #f3f4f6;
+}
+
+.summary-section h4 {
+  font-size: 13px;
+  font-weight: 600;
+  color: #1f2937;
+  margin: 0 0 12px 0;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.summary-text {
+  font-size: 13px;
+  color: #374151;
+  line-height: 1.6;
+  margin: 0;
+  background-color: #f9fafb;
+  padding: 12px;
+  border-radius: 6px;
+  border-left: 3px solid #3b82f6;
+}
+
+/* Risk Section */
+.risk-section {
+  border-left: 2px solid #dc2626;
+}
+
+.risk-words {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.risk-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.risk-badge.critical {
+  background-color: #fee2e2;
+  color: #991b1b;
+  border: 1px solid #fecaca;
+}
+
+.risk-badge.high {
+  background-color: #fef3c7;
+  color: #92400e;
+  border: 1px solid #fcd34d;
+}
+
+.risk-badge small {
+  font-size: 10px;
+  opacity: 0.7;
+}
+
+/* Risk Factors */
+.risk-factors {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.risk-factors li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  color: #374151;
+  padding: 8px;
+  background-color: #f9fafb;
+  border-radius: 4px;
+  border-left: 2px solid #f59e0b;
+}
+
+.risk-icon {
+  font-size: 14px;
+}
+
+/* Recommendations */
+.recommendations {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.recommendations li {
+  font-size: 13px;
+  color: #374151;
+  padding: 10px;
+  background-color: #f9fafb;
+  border-radius: 4px;
+  border-left: 3px solid #10b981;
+  padding-left: 12px;
+  line-height: 1.5;
+}
+
+.recommendations li::before {
+  content: "✓ ";
+  color: #10b981;
+  font-weight: 600;
+}
+
+/* ICD Codes */
+.icd-codes {
+  background-color: #f3f4f6;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  padding: 12px;
+  font-family: "Courier New", monospace;
+  font-size: 12px;
+  color: #374151;
+  word-break: break-all;
+  line-height: 1.6;
+}
+
+/* Confidence Section */
+.confidence-section {
+  border-left: 2px solid #06b6d4;
+}
+
+.confidence-display {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.confidence-bar-container {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.confidence-bar {
+  flex: 1;
+  height: 8px;
+  background-color: #e5e7eb;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.confidence-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #3b82f6 0%, #06b6d4 100%);
+  transition: width 0.5s ease;
+}
+
+.confidence-text {
+  font-size: 14px;
+  font-weight: 700;
+  color: #06b6d4;
+  min-width: 40px;
+  text-align: right;
+}
+
+.confidence-note {
+  font-size: 12px;
+  color: #6b7280;
+  margin: 0;
+}
+
+/* Metadata Section */
+.metadata-section {
+  border-left: 2px solid #9ca3af;
+}
+
+.metadata {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 12px;
+}
+
+.metadata-item {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 10px;
+  background-color: #f9fafb;
+  border-radius: 4px;
+  border-left: 2px solid #9ca3af;
+  padding-left: 12px;
+}
+
+.metadata-item span:first-child {
+  font-size: 11px;
+  font-weight: 600;
+  color: #6b7280;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.metadata-item span:last-child {
+  font-size: 12px;
+  color: #374151;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .case-detail-header {
+    padding: 16px;
+  }
+
+  .section {
+    padding: 16px;
+  }
+
+  .summary-header {
+    padding: 16px;
+  }
+
+  .summary-section {
+    padding: 16px;
+  }
+}
+
+@media (max-width: 768px) {
+  .case-detail-container {
+    border-left: none;
+    border-top: 1px solid #e5e7eb;
+  }
+
+  .case-detail-header {
+    padding: 16px;
+    flex-wrap: wrap;
+  }
+
+  .case-detail-header h2 {
+    font-size: 18px;
+    flex-basis: 100%;
+  }
+
+  .metadata {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .case-detail-header {
+    padding: 12px;
+    gap: 8px;
+  }
+
+  .case-detail-header h2 {
+    font-size: 16px;
+  }
+
+  .case-meta {
+    gap: 8px;
+  }
+
+  .meta-item {
+    font-size: 12px;
+  }
+
+  .section {
+    padding: 12px;
+  }
+
+  .summary-section {
+    padding: 12px;
+  }
+
+  .btn-resummarize {
+    padding: 6px 10px;
+    font-size: 11px;
+  }
+
+  .summary-text {
+    font-size: 12px;
+    padding: 8px;
+  }
+
+  .risk-factors li,
+  .recommendations li {
+    padding: 8px;
+    font-size: 12px;
+  }
+}

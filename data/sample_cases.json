@@ -1,0 +1,32 @@
+[
+  {
+    "caseTitle": "Acute Myocardial Infarction Case",
+    "patientAge": "68",
+    "gender": "Male",
+    "clinicalNotes": "Chief Complaint: Chest pain\n\nHistory of Present Illness:\nPatient is a 68-year-old male presenting with acute onset chest pain. Pain started at 2 AM while sleeping. Describes as crushing substernal chest pain radiating to left arm and jaw. Associated with diaphoresis and shortness of breath. Severity 8/10.\n\nPast Medical History:\n- Hypertension (10 years)\n- Diabetes Mellitus Type 2 (8 years)\n- Hyperlipidemia\n- Previous coronary artery disease\n\nPhysical Examination:\nVital Signs: BP 155/95, HR 105, RR 22, T 36.8°C, O2 sat 94%\nGeneral: Anxious, diaphoretic\nCardiac: Tachycardia, no murmurs\nLungs: Bilateral crackles\n\nInitial Findings:\nECG: ST elevation in leads II, III, aVF\nTroponin I: 2.8 ng/mL (elevated)\nBNP: 450 pg/mL (elevated)"
+  },
+  {
+    "caseTitle": "Community-Acquired Pneumonia",
+    "patientAge": "54",
+    "gender": "Female",
+    "clinicalNotes": "Chief Complaint: Persistent cough and fever\n\nHistory of Present Illness:\nPatient is a 54-year-old female with 5-day history of productive cough with yellow sputum, fever up to 39.5°C, and dyspnea. Also reports pleuritic chest pain and fatigue.\n\nPast Medical History:\n- Asthma\n- COPD\n- Smoking history (1 pack/day for 20 years)\n\nPhysical Examination:\nVital Signs: BP 125/80, HR 98, RR 24, T 39.2°C, O2 sat 89%\nLungs: Crackles over left lower lobe, diminished breath sounds\n\nLaboratory:\nWBC: 14,500/μL\nChest X-ray: Infiltrate left lower lobe"
+  },
+  {
+    "caseTitle": "Diabetic Ketoacidosis",
+    "patientAge": "19",
+    "gender": "Male",
+    "clinicalNotes": "Chief Complaint: Abdominal pain, nausea, vomiting\n\nHistory of Present Illness:\nPatient is a 19-year-old male with Type 1 diabetes presenting with acute onset abdominal pain, nausea, vomiting, and malaise for past 8 hours. Also reports polyuria and polydipsia.\n\nPast Medical History:\n- Type 1 Diabetes (5 years)\n- Recently diagnosed with flu-like symptoms\n\nPhysical Examination:\nVital Signs: BP 95/60, HR 115, RR 28, T 37.8°C\nGeneral: Altered mental status, Kussmaul respirations\nABD: Diffuse tenderness\n\nLaboratory:\nBlood glucose: 550 mg/dL\npH: 7.18 (acidosis)\nBicarbonate: 8 mEq/L (low)\nSerum ketones: Large\n\nImaging: Abdominal CT: No acute findings"
+  },
+  {
+    "caseTitle": "Sepsis from Urinary Tract Infection",
+    "patientAge": "76",
+    "gender": "Female",
+    "clinicalNotes": "Chief Complaint: Fever and confusion\n\nHistory of Present Illness:\nPatient is a 76-year-old female admitted with high fever, confusion, and disorientation. History of urinary dysuria and urgency for past 2 days. Now presenting with sepsis symptoms.\n\nPast Medical History:\n- Type 2 Diabetes\n- Chronic kidney disease Stage 3\n- Recurrent UTIs\n\nPhysical Examination:\nVital Signs: BP 85/52, HR 125, RR 28, T 40.5°C, O2 sat 91%\nGeneral: Confused, lethargic\nABD: Costovertebral angle tenderness\n\nLaboratory:\nWBC: 18,500/μL\nLactate: 4.2 mmol/L (elevated)\nCreatinine: 2.1 mg/dL (elevated)\nUrinalysis: Positive nitrites, WBCs, bacteria\nBlood cultures: Pending\nqSOFA score: 3"
+  },
+  {
+    "caseTitle": "Acute Ischemic Stroke",
+    "patientAge": "72",
+    "gender": "Male",
+    "clinicalNotes": "Chief Complaint: Sudden onset facial drooping and speech difficulty\n\nHistory of Present Illness:\nPatient is a 72-year-old male found 30 minutes after onset of sudden facial drooping, right arm weakness, and slurred speech. Previously independent and healthy.\n\nPast Medical History:\n- Hypertension\n- Atrial fibrillation (on warfarin)\n- Paroxysmal AFib\n\nPhysical Examination:\nVital Signs: BP 165/95, HR 88 (irregular), RR 16, O2 sat 97%\nNeurological: NIHSS score 12\nDeficits: Left facial droop, right upper extremity weakness, dysarthria\n\nImaging:\nHead CT: No acute hemorrhage\nMRI: Acute infarct left middle cerebral artery territory\nTime from symptom onset: 35 minutes"
+  }
+]
